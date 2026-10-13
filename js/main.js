@@ -305,7 +305,7 @@ function initWhatsAppWidget() {
 // EmailJS configuration (EmailJS Dashboard -> Account -> Public Key, Email Services, Templates)
 const EMAILJS_PUBLIC_KEY = 'bq3RWHCsvoGw8dRjc';
 const EMAILJS_SERVICE_ID = 'service_q6ai36k';
-const EMAILJS_TEMPLATE_ID = 'template_rcz2xq';
+const EMAILJS_TEMPLATE_ID = 'template_tb0p6lh';
 
 // AUTO-REPLY TEMPLATE (sent to the visitor who submits the contact form)
 // Create it in your EmailJS Dashboard -> Email Templates -> Create New Template:
@@ -508,7 +508,7 @@ function initContactForm() {
       message: message
     };
 
-    // 1) Send the message to Emmanuel (template_rcz2xq)
+    // 1) Send the message to Emmanuel
     emailjs
       .send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
       .then((response) => {
