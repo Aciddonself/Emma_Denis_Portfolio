@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emmanuel Denis Taban | Developer, Educator & Language Tutor</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Emmanuel Denis Taban is an IT professional, educator, web developer, language tutor, and founding member of Dream Languages and Adult Literacy Uganda.">
+  <meta name="keywords" content="Emmanuel Denis Taban, web developer Uganda, coding tutor Kampala, AI training, language tutor Uganda, Dream Languages and Adult Literacy Uganda">
+  <meta name="author" content="Emmanuel Denis Taban">
+  <link rel="canonical" href="https://emmanueldenistaban.netlify.app/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://emmanueldenistaban.netlify.app/">
+  <meta property="og:title" content="Emmanuel Denis Taban | Developer, Educator & Language Tutor">
+  <meta property="og:description" content="I build for the web, teach people to code, and show them how to put AI to work.">
+  <meta property="og:image" content="https://emmanueldenistaban.netlify.app/Photos/a1.jpeg">
+  <meta property="og:site_name" content="Emmanuel Denis Taban Portfolio">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://emmanueldenistaban.netlify.app/">
+  <meta property="twitter:title" content="Emmanuel Denis Taban | Developer, Educator & Language Tutor">
+  <meta property="twitter:description" content="I build for the web, teach people to code, and show them how to put AI to work.">
+  <meta property="twitter:image" content="https://emmanueldenistaban.netlify.app/Photos/a1.jpeg">
+
+  <!-- Favicon (Crisp inline SVG for lightweight and modern load) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>">
+
+  <!-- Fonts Preconnect & Load -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- CSS Link -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Anti-flash Theme script (Executes synchronously in head to block flash of wrong theme background) -->
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('theme');
+      const userPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const theme = savedTheme || (userPrefersDark ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+
+  <!-- JSON-LD "Person" Structured Data -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Emmanuel Denis Taban",
+      "alternateName": "Emmanuel Taban",
+      "jobTitle": ["IT Professional", "Web Developer", "Educator", "Language Tutor"],
+      "description": "IT professional, educator, and founding member of Dream Languages and Adult Literacy Uganda. Builds for the web and teaches languages, coding, and practical AI.",
+      "url": "https://emmanueldenistaban.netlify.app/",
+      "image": "https://emmanueldenistaban.netlify.app/Photos/a1.jpeg",
+      "email": "emmadenistaban@gmail.com",
+      "telephone": "+256753149567",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kampala",
+        "addressCountry": "Uganda"
+      },
+      "sameAs": [
+        "https://linkedin.com/in/TODO",
+        "https://github.com/TODO",
+        "https://twitter.com/TODO"
+      ],
+      "knowsAbout": ["Web Development", "HTML", "CSS", "JavaScript", "React", "Python", "AI", "AI Agents", "Language Tutoring", "English", "Kiswahili", "Dutch", "Teaching"]
+    }
+  </script>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       SVG FILTERS DEFINITIONS (For Refraction Effect)
+       ========================================================================== -->
+  <svg class="sr-only" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <!-- Subtly noisy refraction maps -->
+      <filter id="glass-refract-light" x="0%" y="0%" width="100%" height="100%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="2" result="noise" />
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="4" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+      <filter id="glass-refract-heavy" x="0%" y="0%" width="100%" height="100%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.018" numOctaves="3" result="noise" />
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="8" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+    </defs>
+  </svg>
+
+  <!-- ==========================================================================
+       FLOATING BACKGROUND ORBS (Refracted behind glass panels)
+       ========================================================================== -->
+  <div class="bg-orbs" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="orb orb-4"></div>
+  </div>
+
+  <!-- ==========================================================================
+       1. NAVIGATION HEADER (Floating Sticky Glass)
+       ========================================================================== -->
+  <header class="header-nav">
+    <div class="container">
+      <nav class="glass-panel nav-container refract-active" aria-label="Main Navigation">
+        <!-- Logo -->
+        <a href="#home" class="nav-logo" aria-label="Emmanuel Denis Taban Portfolio Logo">
+          <span>Emmanuel Denis Taban</span>
+        </a>
+
+        <!-- Hamburger Icon (Mobile) -->
+        <button id="hamburger" class="hamburger" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <!-- Navigation Links & Theme Toggle Toggle -->
+        <ul id="nav-links" class="nav-links">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+          
+          <!-- Liquid Glass Pill Theme Toggle Button -->
+          <li>
+            <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle Light or Dark Mode" tabindex="0">
+              <!-- Sun Icon -->
+              <svg id="theme-icon-sun" class="active-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="4"></circle>
+                <path d="M12 2v2"></path>
+                <path d="M12 20v2"></path>
+                <path d="M4.93 4.93l1.41 1.41"></path>
+                <path d="M17.66 17.66l1.41 1.41"></path>
+                <path d="M2 12h2"></path>
+                <path d="M20 12h2"></path>
+                <path d="M6.34 17.66l-1.41 1.41"></path>
+                <path d="M19.07 4.93l-1.41 1.41"></path>
+              </svg>
+              
+              <!-- Sliding Indicator Knob -->
+              <span class="theme-toggle-knob" aria-hidden="true"></span>
+              
+              <!-- Moon Icon -->
+              <svg id="theme-icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+              </svg>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       MAIN PAGE CONTAINER
+       ========================================================================== -->
+  <main>
+
+    <!-- ==========================================================================
+         2. HERO / HOME SECTION
+         ========================================================================== -->
+    <section id="home" class="flex-center">
+      <div class="container">
+        <div class="hero-wrapper">
+          <!-- Text Columns -->
+          <div class="hero-content reveal-fade-up">
+            <span class="hero-subtitle">DEVELOPER · EDUCATOR · FOUNDING MEMBER OF DLA UGANDA</span>
+            
+            <h1 class="hero-title">
+              Hi, I'm <span class="name">Emmanuel Denis Taban</span>
+            </h1>
+
+            <!-- Typing/Rotating text effect of roles -->
+            <div class="hero-roles" aria-live="polite">
+              <div class="roles-container">
+                <div class="role-item">Web Developer</div>
+                <div class="role-item">Educator</div>
+                <div class="role-item">Language Tutor</div>
+                <div class="role-item">AI Trainer</div>
+              </div>
+            </div>
+
+            <p class="hero-desc">
+              I build for the web, teach people to code, and show them how to put AI to work.
+            </p>
+
+            <div class="hero-buttons">
+              <a href="#experience" class="btn btn-primary">
+                My Experience
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+              </a>
+              <a href="#contact" class="btn btn-secondary">
+                Hire Me
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+              </a>
+            </div>
+
+            <!-- Social Links with Placeholders (TODO markers) -->
+            <div class="hero-socials">
+              <!-- TODO: Insert actual LinkedIn URL here -->
+              <a href="#" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile connection link">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+              </a>
+              <!-- TODO: Insert actual X/Twitter URL here -->
+              <a href="#" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="X / Twitter profile connection link">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+              </a>
+              <!-- TODO: Insert actual GitHub URL here -->
+              <a href="#" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="GitHub projects repository link">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Glass Framed Portrait image (with rotating glow ring behind) -->
+          <div class="hero-image-wrapper reveal-fade-up reveal-delay-200">
+            <div class="glow-ring"></div>
+            <div class="glass-panel glass-image-frame">
+              <img src="Photos/a1.jpeg" alt="Emmanuel Denis Taban Portrait - IT Professional and Developer" width="340" height="340" loading="eager">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Arrow scroll to contact / next section -->
+      <a href="#about" class="scroll-indicator" aria-label="Scroll down to About section">
+        <span>SCROLL DOWN</span>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+        </svg>
+      </a>
+    </section>
+
+    <!-- ==========================================================================
+         3. ABOUT ME SECTION & COUNTERS
+         ========================================================================== -->
+    <section id="about">
+      <div class="container">
+        <!-- Section Title -->
+        <div class="section-header reveal-fade-up">
+          <span class="section-subtitle">ABOUT ME</span>
+          <h2 class="section-title text-primary">Technology, Language & Opportunity</h2>
+          <div style="width:60px; height:3px; background:var(--accent-gradient); margin:1rem auto; border-radius:10px;"></div>
+        </div>
+
+        <div class="about-wrapper">
+          <!-- Column 1: Media Portrait Frame -->
+          <div class="about-image-column reveal-fade-up">
+            <div class="glass-panel glass-image-frame" style="padding: 1rem;">
+              <img src="Photos/a3.png" alt="Emmanuel Denis Taban - Web Development, Teaching and Language Tutoring" width="360" height="360" loading="lazy">
+            </div>
+          </div>
+
+          <!-- Column 2: Text details and counter metrics -->
+          <div class="about-content reveal-fade-up reveal-delay-200">
+            <div class="about-text">
+              <p>
+                I’m Emmanuel, an IT professional who believes technology and language are two of the strongest tools for changing a life. As a founding member of <a href="https://www.dreamlanguagesug.com" target="_blank" rel="noopener noreferrer"><strong>Dream Languages and Adult Literacy Uganda</strong></a>, I teach English, Kiswahili and Dutch, and train developers in React, JavaScript, CSS, HTML and Python.
+              </p>
+              <p>
+                I also help learners put AI to work in their daily lives and build AI agents that get tasks done. Whether I’m building a website or teaching a class, my goal is the same: to make people capable, confident and ready for the future.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         4. SKILLS SECTION (STAGGERED CHIPS)
+         ========================================================================== -->
+    <section id="skills" style="background: rgba(15, 23, 42, 0.15);">
+      <div class="container">
+        <!-- Section Title -->
+        <div class="section-header reveal-fade-up">
+          <span class="section-subtitle">MY EXPERTISE</span>
+          <h2 class="section-title">Core Skills & Specialties</h2>
+          <p class="section-desc">Practical technical, AI, language and teaching skills.</p>
+          <div style="width:60px; height:3px; background:var(--accent-gradient); margin:1rem auto; border-radius:10px;"></div>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Skill card 1: Technical Skills -->
+          <div class="glass-panel glass-hover-card skill-card reveal-fade-up">
+            <div class="skill-icon-box">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-6 18.75h12" />
+              </svg>
+            </div>
+            <div class="skill-info">
+              <h3 class="skill-title">Technical Skills</h3>
+              <p class="skill-desc">HTML, CSS, JavaScript, React, Python, Git and GitHub, Netlify deployment, EmailJS, responsive design and modern UI including glassmorphism.</p>
+            </div>
+          </div>
+
+          <!-- Skill card 2: AI -->
+          <div class="glass-panel glass-hover-card skill-card reveal-fade-up reveal-delay-100">
+            <div class="skill-icon-box">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 9.75L16.5 12l-2.25 2.25m-4.5 0L7.5 12l2.25-2.25M6 20.25h12A2.25 2.25 0 0020.25 18V6A2.25 2.25 0 0018 3.75H6A2.25 2.25 0 003.75 6v12A2.25 2.25 0 006 20.25z" />
+              </svg>
+            </div>
+            <div class="skill-info">
+              <h3 class="skill-title">AI</h3>
+              <p class="skill-desc">Everyday AI use, prompt writing, and building AI agents to automate tasks.</p>
+            </div>
+          </div>
+
+          <!-- Skill card 3: Languages -->
+          <div class="glass-panel glass-hover-card skill-card reveal-fade-up reveal-delay-200">
+            <div class="skill-icon-box">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9s2.015-9 4.5-9m0 0a9.003 9.003 0 018.716 5.253M12 3a9.003 9.003 0 00-8.716 5.253M12 11.25c1.24 0 2.25-1.01 2.25-2.25S13.24 6.75 12 6.75 9.75 7.76 9.75 9s1.01 2.25 2.25 2.25z" />
+              </svg>
+            </div>
+            <div class="skill-info">
+              <h3 class="skill-title">Languages</h3>
+              <p class="skill-desc">English, Kiswahili and Dutch.</p>
+            </div>
+          </div>
+
+          <!-- Skill card 4: Teaching & Community -->
+          <div class="glass-panel glass-hover-card skill-card reveal-fade-up reveal-delay-300">
+            <div class="skill-icon-box">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75" />
+              </svg>
+            </div>
+            <div class="skill-info">
+              <h3 class="skill-title">Teaching & Community</h3>
+              <p class="skill-desc">Teaching and mentoring, curriculum design, communication across cultures, community building and entrepreneurship.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         5. EXPERIENCE SECTION
+         ========================================================================== -->
+    <section id="experience">
+      <div class="container">
+        <!-- Section Title -->
+        <div class="section-header reveal-fade-up">
+          <span class="section-subtitle">MY EXPERIENCE</span>
+          <h2 class="section-title">Building & Teaching</h2>
+          <p class="section-desc">Web development and practical learning in languages, coding and AI.</p>
+          <div style="width:60px; height:3px; background:var(--accent-gradient); margin:1rem auto; border-radius:10px;"></div>
+        </div>
+
+        <!-- Responsive Grid of Cards -->
+        <div class="projects-grid">
+          <!-- Dream Languages and Adult Literacy Uganda -->
+          <div class="glass-panel glass-hover-card project-card reveal-fade-up">
+            <div class="project-image-box">
+              <div class="project-placeholder"></div>
+              <span class="project-category">Education & Community</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Founding Member and Tutor</h3>
+              <p class="project-desc">Helped establish <a href="https://www.dreamlanguagesug.com" target="_blank" rel="noopener noreferrer"><strong>Dream Languages and Adult Literacy Uganda (DLA)</strong></a>, which provides language and adult literacy training. Teach English, Kiswahili and Dutch, and train developers in web technologies, Python and practical AI through project-based lessons.</p>
+              <div class="project-meta">
+                <span class="role">Kampala, Uganda</span>
+                <span class="year">Present</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Web development -->
+          <div class="glass-panel glass-hover-card project-card reveal-fade-up reveal-delay-100">
+            <div class="project-image-box">
+              <div class="project-placeholder" style="background: linear-gradient(135deg, rgba(124, 58, 237, 0.35), rgba(236, 72, 153, 0.35), rgba(37, 99, 235, 0.35));"></div>
+              <span class="project-category">Web Development</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">IT Professional and Web Developer</h3>
+              <p class="project-desc">Design and build responsive websites with HTML, CSS, JavaScript and React. Create portfolio and business websites with contact forms, email automation and WhatsApp integration, and deploy and maintain sites on Netlify.</p>
+              <div class="project-meta">
+                <span class="role">Web development</span>
+                <span class="year">Present</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         6. SERVICES SECTION
+         ========================================================================== -->
+    <section id="services" style="background: rgba(15, 23, 42, 0.15);">
+      <div class="container">
+        <!-- Section Title -->
+        <div class="section-header reveal-fade-up">
+          <span class="section-subtitle">HOW I CAN HELP</span>
+          <h2 class="section-title">Services</h2>
+          <p class="section-desc">Practical support for your website, learning and language goals.</p>
+          <div style="width:60px; height:3px; background:var(--accent-gradient); margin:1rem auto; border-radius:10px;"></div>
+        </div>
+
+        <!-- Timeline Container -->
+        <div class="timeline-container">
+          
+          <!-- Web development -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="glass-panel glass-hover-card timeline-panel reveal-fade-up">
+              <span class="timeline-year">Web development</span>
+              <h3 class="timeline-title">Web Development</h3>
+              <p class="timeline-desc">Modern, responsive websites for individuals and businesses.</p>
+            </div>
+          </div>
+
+          <!-- Coding classes -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="glass-panel glass-hover-card timeline-panel reveal-fade-up">
+              <span class="timeline-year" style="background: linear-gradient(135deg, #06b6d4, #2563eb);">Coding classes</span>
+              <h3 class="timeline-title">Coding Classes</h3>
+              <p class="timeline-desc">One-on-one and group lessons in HTML, CSS, JavaScript, React and Python.</p>
+            </div>
+          </div>
+
+          <!-- AI training -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="glass-panel glass-hover-card timeline-panel reveal-fade-up">
+              <span class="timeline-year">AI training</span>
+              <h3 class="timeline-title">AI Training</h3>
+              <p class="timeline-desc">Practical AI for work, study and business, including building AI agents that complete tasks.</p>
+            </div>
+          </div>
+
+          <!-- Language tutoring -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="glass-panel glass-hover-card timeline-panel reveal-fade-up">
+              <span class="timeline-year" style="background: linear-gradient(135deg, #06b6d4, #2563eb);">Language tutoring</span>
+              <h3 class="timeline-title">Language Tutoring</h3>
+              <p class="timeline-desc">English, Kiswahili and Dutch lessons for beginners through advanced learners.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         6B. TESTIMONIALS / REVIEWS SECTION
+         ========================================================================== -->
+    <section id="reviews" style="background: rgba(15, 23, 42, 0.15);">
+      <div class="container">
+        <!-- Section Title -->
+        <div class="section-header reveal-fade-up">
+          <span class="section-subtitle">TESTIMONIALS</span>
+          <h2 class="section-title">What People Say About My Work</h2>
+          <p class="section-desc">Feedback from clients, collaborators, and students.</p>
+          <div style="width:60px; height:3px; background:var(--accent-gradient); margin:1rem auto; border-radius:10px;"></div>
+        </div>
+
+        <!-- Reviews Grid (populated by js/main.js -> renderReviews) -->
+        <div id="reviews-grid" class="testimonials-grid">
+          <!-- Testimonial cards are injected here by js/main.js -->
+        </div>
+
+        <!-- Leave a Review Form -->
+        <div class="glass-panel review-form-card reveal-fade-up reveal-delay-200">
+          <div class="review-form-header">
+            <h3 class="review-form-title">Leave a Review</h3>
+            <p class="review-form-desc">Enjoyed working with me? Share your experience - your review lands straight in my inbox.</p>
+          </div>
+
+          <form id="portfolio-review-form" novalidate>
+
+            <!-- Hidden Honeypot Field for Spam bots protection (checked in js/main.js) -->
+            <div class="hidden-honeypot" aria-hidden="true">
+              <label>Don't fill this out if you're human: <input name="review-bot-field" tabindex="-1"></label>
+            </div>
+
+            <!-- Star Rating Widget -->
+            <div class="form-group">
+              <span class="form-label" id="rating-label">Your Rating</span>
+              <div class="rating-input" id="rating-widget" role="radiogroup" aria-labelledby="rating-label" aria-required="true">
+                <button type="button" class="star-btn" role="radio" aria-checked="false" data-value="1" aria-label="Rate 1 star">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                </button>
+                <button type="button" class="star-btn" role="radio" aria-checked="false" data-value="2" aria-label="Rate 2 stars">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                </button>
+                <button type="button" class="star-btn" role="radio" aria-checked="false" data-value="3" aria-label="Rate 3 stars">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                </button>
+                <button type="button" class="star-btn" role="radio" aria-checked="false" data-value="4" aria-label="Rate 4 stars">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                </button>
+                <button type="button" class="star-btn" role="radio" aria-checked="false" data-value="5" aria-label="Rate 5 stars">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Name and Email Row -->
+            <div class="form-group-row">
+              <div class="form-group">
+                <label for="review-name" class="form-label">Name</label>
+                <input type="text" id="review-name" class="form-control" placeholder="Your Name" required>
+              </div>
+
+              <div class="form-group">
+                <label for="review-email" class="form-label">Email (optional)</label>
+                <input type="email" id="review-email" class="form-control" placeholder="your@email.com">
+              </div>
+            </div>
+
+            <!-- Review Textarea -->
+            <div class="form-group">
+              <label for="review-text" class="form-label">Your Review</label>
+              <textarea id="review-text" class="form-control" placeholder="Tell me about your experience working with me..." required></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" id="review-submit-btn" class="btn btn-primary" style="width: 100%; border-radius: var(--radius-sm);">
+              <span>Submit Review</span>
+              <div class="spinner" aria-hidden="true"></div>
+            </button>
+
+            <!-- AJAX Success/Error container -->
+            <div id="review-message-box" class="form-message" role="alert" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         7. CONTACT SECTION & EMAILJS FORM
+         ========================================================================== -->
+    <section id="contact">
+      <div class="container">
+        <!-- Section Title -->
+        <div class="section-header reveal-fade-up">
+          <span class="section-subtitle">GET IN TOUCH</span>
+          <h2 class="section-title">Let's Work Together</h2>
+          <div style="width:60px; height:3px; background:var(--accent-gradient); margin:1rem auto; border-radius:10px;"></div>
+        </div>
+
+        <div class="contact-wrapper">
+          <!-- Column 1: Info Cards -->
+          <div class="contact-info-column reveal-fade-up">
+            <p class="contact-desc">
+              Looking for a website, coding or AI lessons, or language tutoring? Get in touch to discuss how we can work together.
+            </p>
+
+            <div class="contact-cards">
+              <!-- Email Card -->
+              <div class="glass-panel glass-hover-card contact-info-card">
+                <div class="contact-info-icon-box">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 3.847v-8.314l4.623 4.467zm-4.623 5.485l5.07-4.219 1.157 1.118 1.157-1.118 5.07 4.219h-12.454zm13.754-5.485l4.623-4.467v8.314l-4.623-3.847zm-1.554-.515l-2.2 2.126-2.2-2.126-5.834-5.639h16.068l-5.834 5.639z"/></svg>
+                </div>
+                <div class="contact-info-details">
+                  <span class="contact-info-label">Email Address</span>
+                  <span class="contact-info-value">
+                    <a href="mailto:emmadenistaban@gmail.com" aria-label="Send email to Emmanuel Denis Taban">emmadenistaban@gmail.com</a>
+                  </span>
+                </div>
+              </div>
+
+              <!-- Phone Card -->
+              <div class="glass-panel glass-hover-card contact-info-card">
+                <div class="contact-info-icon-box">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 22.622l-1.383-1.383c-.318-.318-.738-.475-1.157-.475-.419 0-.839.157-1.157.475L15.12 22.42c-2.825-1.254-5.215-3.645-6.47-6.47l1.182-1.183c.639-.639.639-1.675 0-2.314l-1.383-1.383c-.318-.318-.738-.475-1.157-.475-.419 0-.839.157-1.157.475L3.552 12.27c-.318.318-.475.738-.475 1.157 0 .419.157.839.475 1.157C4.843 19.346 11.654 26.157 16.41 27.42c.318.318.738.475 1.157.475.419 0 .839-.157 1.157-.475l1.183-1.182c.639-.639.639-1.675 0-2.314zM16.41 25.42C12.351 24.16 8.84 20.649 7.58 16.59c.758-.758 1.488-1.488 2.246-2.246l.758.758c.28.28.28.736 0 1.016l-2.071 2.07c1.393 3.195 3.96 5.762 7.155 7.155l2.07-2.071c.28-.28.736-.28 1.016 0l.758.758c-.758.758-1.488 1.488-2.246 2.246zM21 0h-18c-1.654 0-3 1.346-3 3v18c0 1.654 1.346 3 3 3h4.15l-1.319-1.318-1.831-1.832v-17.85h18v11h2v-13c0-1.654-1.346-3-3-3zm-9 6h-6v2h6v-2zm4 4h-10v2h10v-2zm-1 4h-9v2h9v-2z"/></svg>
+                </div>
+                <div class="contact-info-details">
+                  <span class="contact-info-label">WhatsApp & Call</span>
+                  <span class="contact-info-value">
+                    <a href="tel:+256753149567" aria-label="Call Emmanuel Denis Taban">+256 753 149567</a>
+                  </span>
+                </div>
+              </div>
+
+              <!-- Location Card -->
+              <div class="glass-panel glass-hover-card contact-info-card">
+                <div class="contact-info-icon-box">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"/></svg>
+                </div>
+                <div class="contact-info-details">
+                  <span class="contact-info-label">Office Location</span>
+                  <span class="contact-info-value">Kampala, Uganda</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 2: EmailJS contact form in a Glass Panel -->
+          <!-- NOTE ON EMAILJS CONFIGURATION:
+               Email delivery is handled by EmailJS. The public key, service ID
+               and template ID are configured in js/main.js (initContactForm).
+           -->
+          <div class="glass-panel contact-form-card reveal-fade-up reveal-delay-200">
+            <form id="portfolio-contact-form" name="contact" novalidate>
+              
+              <!-- Hidden Honeypot Field for Spam bots protection (checked in js/main.js) -->
+              <div class="hidden-honeypot" aria-hidden="true">
+                <label>Don't fill this out if you're human: <input name="bot-field" tabindex="-1"></label>
+              </div>
+
+              <!-- Name and Email Row -->
+              <div class="form-group-row">
+                <div class="form-group">
+                  <label for="form-name" class="form-label">Name</label>
+                  <input type="text" id="form-name" name="name" class="form-control" placeholder="Your Name" required>
+                </div>
+                
+                <div class="form-group">
+                  <label for="form-email" class="form-label">Email Address</label>
+                  <input type="email" id="form-email" name="email" class="form-control" placeholder="your@email.com" required>
+                </div>
+              </div>
+
+              <!-- Subject Field -->
+              <div class="form-group">
+                <label for="form-subject" class="form-label">Subject</label>
+                <input type="text" id="form-subject" name="subject" class="form-control" placeholder="Project / Query Topic" required>
+              </div>
+
+              <!-- Message Textarea -->
+              <div class="form-group">
+                <label for="form-message" class="form-label">Message Details</label>
+                <textarea id="form-message" name="message" class="form-control" placeholder="Write your project details or inquiries here..." required></textarea>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" id="form-submit-btn" class="btn btn-primary" style="width: 100%; border-radius: var(--radius-sm);">
+                <span>Submit Message</span>
+                <div class="spinner" aria-hidden="true"></div>
+              </button>
+
+              <!-- AJAX Success/Error container -->
+              <div id="form-message-box" class="form-message" role="alert" aria-live="polite"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       8. FOOTER
+       ========================================================================== -->
+  <footer class="glass-panel" style="border-radius:0;">
+    <div class="container">
+      <div class="footer-container">
+        <!-- Copyright details -->
+        <span class="footer-text">
+          Developer | Language tutor | Founding member, DLA Uganda | Teaching code and AI 🇺🇬 · Emmanuel Denis Taban &copy; <span id="footer-year">2026</span>
+        </span>
+
+        <!-- Floating-like 'Back to Top' button on desktop / tablet -->
+        <button id="back-to-top-btn" class="glass-panel back-to-top-btn" aria-label="Scroll back to top of the webpage">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       9. WHATSAPP CHAT CHIP POPUP WIDGET
+       ========================================================================== -->
+  <div class="whatsapp-widget-container" role="dialog" aria-label="WhatsApp live chat popup widget">
+    
+    <!-- Mini Card Dialogue Window -->
+    <div id="whatsapp-popup" class="glass-panel whatsapp-popup">
+      <!-- Popup Header -->
+      <div class="whatsapp-popup-header">
+        <div class="whatsapp-popup-avatar-box">
+          <img src="Photos/a1.jpeg" alt="Emmanuel Denis Taban" width="44" height="44" loading="lazy">
+          <span class="whatsapp-online-dot"></span>
+        </div>
+        <div class="whatsapp-popup-header-info">
+          <span class="whatsapp-popup-header-name">Emmanuel Denis Taban</span>
+          <span class="whatsapp-popup-header-status">Typically replies in hours</span>
+        </div>
+        <!-- Close button (X) -->
+        <button id="whatsapp-popup-close" class="whatsapp-popup-close-btn" aria-label="Close WhatsApp chat popup">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+
+      <!-- Popup Body -->
+      <div class="whatsapp-popup-body">
+        <p class="whatsapp-popup-msg">
+          Hello! How can I help you today? Let's talk about a website, coding or AI classes, or language tutoring.
+        </p>
+        
+        <div class="whatsapp-popup-actions">
+          <!-- WhatsApp Link -->
+          <a id="whatsapp-start-chat" href="https://wa.me/256753149567?text=Hello%20Emmanuel%2C%20I%20visited%20your%20portfolio%20and%20would%20like%20to%20talk." target="_blank" rel="noopener noreferrer" class="whatsapp-popup-btn whatsapp-popup-btn-wa">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.504-5.731-1.464L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.414 9.863-9.847.002-2.63-1.023-5.101-2.887-6.968a9.756 9.756 0 00-6.977-2.875c-5.433 0-9.858 4.415-9.86 9.849-.001 1.745.466 3.447 1.353 4.954l-.995 3.63 3.738-.979zm11.105-6.84c-.302-.152-1.792-.882-2.07-.982-.278-.1-.48-.152-.68.152-.201.304-.775.98-.95 1.18-.175.2-.35.225-.652.074-.302-.152-1.275-.469-2.427-1.496-.897-.798-1.502-1.785-1.678-2.088-.175-.303-.019-.467.133-.617.136-.134.302-.354.453-.531.152-.177.202-.303.303-.505.101-.202.051-.38-.025-.531-.076-.152-.68-1.637-.932-2.245-.246-.59-.496-.51-.68-.52-.176-.008-.377-.01-.578-.01-.201 0-.527.075-.803.379-.276.304-1.054 1.027-1.054 2.505 0 1.477 1.079 2.905 1.23 3.107.152.202 2.117 3.23 5.129 4.532.717.31 1.275.495 1.711.634.721.23 1.378.197 1.9.119.58-.087 1.792-.73 2.046-1.439.252-.71.252-1.317.176-1.439-.076-.123-.278-.198-.58-.35z"/></svg>
+            <span>Start Chat on WhatsApp</span>
+          </a>
+          <!-- Direct Call link -->
+          <a href="tel:+256753149567" class="whatsapp-popup-btn whatsapp-popup-btn-call">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.622l10.707 10.707M12 21a9 9 0 110-18 9 9 0 010 18z"/></svg>
+            <span>Call (+256 753 149567)</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Radial pulsing trigger button -->
+    <button id="whatsapp-trigger-btn" class="whatsapp-trigger-btn refract-active" aria-expanded="false" aria-controls="whatsapp-popup" aria-haspopup="dialog" aria-label="Open WhatsApp live chat window">
+      <!-- Tooltip badge -->
+      <span class="whatsapp-tooltip">Chat with me</span>
+      
+      <!-- Crisp WhatsApp Logo -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.504-5.731-1.464L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.414 9.863-9.847.002-2.63-1.023-5.101-2.887-6.968a9.756 9.756 0 00-6.977-2.875c-5.433 0-9.858 4.415-9.86 9.849-.001 1.745.466 3.447 1.353 4.954l-.995 3.63 3.738-.979zm11.105-6.84c-.302-.152-1.792-.882-2.07-.982-.278-.1-.48-.152-.68.152-.201.304-.775.98-.95 1.18-.175.2-.35.225-.652.074-.302-.152-1.275-.469-2.427-1.496-.897-.798-1.502-1.785-1.678-2.088-.175-.303-.019-.467.133-.617.136-.134.302-.354.453-.531.152-.177.202-.303.303-.505.101-.202.051-.38-.025-.531-.076-.152-.68-1.637-.932-2.245-.246-.59-.496-.51-.68-.52-.176-.008-.377-.01-.578-.01-.201 0-.527.075-.803.379-.276.304-1.054 1.027-1.054 2.505 0 1.477 1.079 2.905 1.23 3.107.152.202 2.117 3.23 5.129 4.532.717.31 1.275.495 1.711.634.721.23 1.378.197 1.9.119.58-.087 1.792-.73 2.046-1.439.252-.71.252-1.317.176-1.439-.076-.123-.278-.198-.58-.35z" fill="currentColor"/>
+      </svg>
+    </button>
+  </div>
+
+  <!-- ==========================================================================
+       10. CORE PORTFOLIO SCRIPTS
+       ========================================================================== -->
+  <!-- EmailJS SDK (loads before main.js so the emailjs global is available) -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
